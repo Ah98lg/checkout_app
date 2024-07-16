@@ -69,6 +69,8 @@ func (b *Bill) formatBill() string {
 
 	formatedBill += fmt.Sprintf("%-25v ...%v\n", "Valor total:", b.total+b.tip)
 
+	formatedBill += fmt.Sprintf("%-25v ...%v\n", "Valor por pessoa:", b.total/float64(b.consumers))
+
 	return formatedBill
 }
 
